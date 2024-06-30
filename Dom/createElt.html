@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create an Element</title>
+</head>
+<body style="background-color: #212121; color: #fff;">
+
+</body>
+<script>
+    const div = document.createElement('div')
+    console.log(div);
+    div.className = "main"
+    div.id = Math.round(Math.random() * 10 + 1)
+    div.setAttribute("title", "heading")
+    div.style.margin = "auto"
+    div.style.width = "50%"
+    div.style.border = "2px solid white"
+    div.style.backgroundColor = "red"
+    div.style.padding = "10px"
+    div.style.textAlign = "center"
+    //div.innerText = "India Won by 7 runs" (below method can also be used as to enter the text)
+    const addText = document.createTextNode("India Won by 7 runs")
+    div.appendChild(addText)
+
+    document.body.appendChild(div)
+</script>
+</html>
