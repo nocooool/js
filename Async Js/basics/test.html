@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>testing</title>
+</head>
+<body>
+    <h1>Testing Async Js</h1>
+    <button id="start">START</button>
+    <button id="stop"> STOP </button>
+</body>
+<script>
+    // setTimeout(function(){
+    //     console.log('DAMNNNNN !!!')
+    // }, 2500)
+
+    // const func = function(){
+    //     const head = document.querySelector('h1')
+    //     head.innerHTML = 'We are Done !!'
+    // }
+
+    // const act = setTimeout(func, 2000)
+
+    
+    // document.querySelector('#stop').addEventListener('click', ()=>{
+    //     clearTimeout(act);
+    //     console.log('Stopped');
+    // })
+    const func = function(str){
+        console.log(str , Date.now())
+    }
+
+    //video 38 , timestamp =>(16:30)
+    let act;
+    document.querySelector('#start').addEventListener('click', function() {
+        act = setInterval(func, 1000 , "hi")
+    })
+    document.querySelector('#stop').addEventListener('click', function(){
+        clearInterval(act)
+        act = null; //just a good practice
+    })
+   
+</script>
+</html>
